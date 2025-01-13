@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern recruitment company landing page">
+  <title>Modern Landing Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #004d26, #00703e, #33b864, #f9f9f9);
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: transparent;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6347;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #FF4500;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      background: linear-gradient(to bottom, #004d26, #00703e, #33b864);
+      color: white;
+      height: 75vh;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+
+    .hero-content button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      background: #33b864;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero-content button:hover {
+      background: #2b954f;
+    }
+
+    .hero-image {
+      max-width: 40%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .section {
+      padding: 50px 20px;
+      margin: 0;
+      background: transparent;
+    }
+
+    .section h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: #00703e;
+      text-align: center;
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 40px;
+      background: #f1fff4;
+      color: #333;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+      margin: 10px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .about-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-item i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #33b864;
+    }
+
+    .about-item h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #33b864;
+    }
+
+    .about-item p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      background: rgba(0, 77, 38, 0.9);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #33b864;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    header.scrolled {
+      background: rgba(0, 77, 38, 0.9);
+      transition: background 0.3s ease;
+    }
+
+    .section.steps .steps-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('./img/logo.svg') no-repeat center / contain;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo" style="color: #fff; display: flex; align-items: center;">
+      <img src="./img/logo.png" alt="א. ארזים" style="height: 50px; margin-right: 10px;">
+      <span>א. ארזים</span>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#steps">Steps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero"
+      style="position: relative; background: linear-gradient(to bottom, #004d26, #00703e, #33b864); color: white; height: 75vh;">
+      <div class="hero-content">
+        <h1>Hire the Best Talent</h1>
+        <p>We connect top professionals with leading companies across the globe. Start your journey with us today.</p>
+        <div class="hero-buttons">
+          <button class="btn-employer"
+            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">For Employers</button>
+          <button class="btn-jobseeker"
+            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">For Job
+            Seekers</button>
+        </div>
+      </div>
+
+      <div class="hero-background"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-item">
+        <i class="fas fa-industry"></i>
+        <h3>Factory</h3>
+        <p>Skilled workers for production and assembly lines.</p>
+      </div>
+      <div class="about-item">
+        <i class="fas fa-warehouse"></i>
+        <h3>Warehouse</h3>
+        <p>Reliable staff for logistics and inventory management.</p>
+      </div>
+      <div class="about-item">
+        <i class="fas fa-briefcase"></i>
+        <h3>Office</h3>
+        <p>Professional administrative and customer support personnel.</p>
+      </div>
+      <div class="about-item">
+        <i class="fas fa-spray-can"></i>
+        <h3>Cleaning</h3>
+        <p>Efficient cleaning staff for commercial and residential spaces.</p>
+      </div>
+      <div class="about-item">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Delivery</h3>
+        <p>Reliable delivery personnel for fast and secure services.</p>
+      </div>
+    </section>
+
+
+
+    <section id="steps" class="section steps">
+
+      <h2 class="steps-title">Steps to Success</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon"><i class="fas fa-user-circle"></i></div>
+          <h3>Step 1</h3>
+          <p>Create your profile and showcase your skills to employers.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fas fa-search"></i></div>
+          <h3>Step 2</h3>
+          <p>Search for jobs that match your qualifications and preferences.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Step 3</h3>
+          <p>Apply for jobs, attend interviews, and land your dream role.</p>
+        </div>
+      </div>
+      <style>
+        .steps {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          margin-top: 30px;
+        }
+
+        .step {
+          flex: 1;
+          max-width: 300px;
+          padding: 20px;
+          background: #f1fff4;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .step:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-icon {
+          font-size: 3rem;
+          margin-bottom: 15px;
+          color: #33b864;
+        }
+
+        .step h3 {
+          font-size: 1.5rem;
+          color: #00703e;
+          margin-bottom: 10px;
+        }
+
+        .step p {
+          font-size: 1rem;
+          color: #666;
+        }
+      </style>
+    </section>
+  </main>
+
+  <footer>
+    <section id="contact" class="section"
+      style="background: #f1fff4; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+      <h2 style="font-size: 2.5rem; color: #33b864; text-align: center; margin-bottom: 20px;">Contact Us Now!</h2>
+      <p style="text-align: center; font-size: 1rem; color: #666; max-width: 600px; margin: 20px auto;">We are ready to
+        help you find the best professionals or land your dream job. Contact us, and we'll solve your task in no time!
+      </p>
+      <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap;">
+        <div style="flex: 1; max-width: 500px;">
+          <ul style="list-style: none; padding: 0; text-align: left;">
+            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i>
+              Multilingual support</li>
+
+            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> Quick
+              response</li>
+            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i>
+              Personalized approach</li>
+            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> 24/7
+              support</li>
+            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> Extensive
+              database of jobs and workers</li>
+          </ul>
+        </div>
+        <div style="flex: 1; max-width: 500px;">
+          <form class="contact-form" style="width: 100%;">
+            <input type="text" placeholder="Your Name"
+              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            <input type="email" placeholder="Your Email"
+              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            <textarea placeholder="Your Message"
+              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+            <button type="submit"
+              style="padding: 10px 20px; background: #33b864; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">Send
+              Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="social-icons" style="margin-top: 20px; text-align: center;">
+        <a href="https://www.facebook.com/profile.php?id=61571058780540&mibextid=ZbWKwL"
+          style="margin: 0 10px; color: #33b864;"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://wa.me/972542234160" style="margin: 0 10px; color: #33b864;"><i
+            class="fab fa-whatsapp fa-2x"></i></a>
+        <a href="https://www.instagram.com/jobinisrael_arzimhr?igsh=MTFoaXoyMjRvd2Rzcg=="
+          style="margin: 0 10px; color: #33b864;"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://t.me/WorkWithAArzim" style="margin: 0 10px; color: #33b864;"><i
+            class="fab fa-telegram fa-2x"></i></a>
+      </div>
+    </section>
+    <p>&copy; 2025 HiringPro. All rights reserved. <a href="#">Privacy Policy</a></p>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
