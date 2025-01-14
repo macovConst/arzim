@@ -264,7 +264,7 @@ header nav a:hover {
 
 .contact-columns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
@@ -397,5 +397,19 @@ footer a:hover {
   .steps {
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }
