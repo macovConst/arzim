@@ -7,242 +7,13 @@
   <meta name="description" content="Modern recruitment company landing page">
   <title>Modern Landing Page</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #004d26, #00703e, #33b864, #f9f9f9);
-      color: #fff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background: transparent;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #ff6347;
-    }
-
-    header nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    header nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    header nav a:hover {
-      color: #FF4500;
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 50px;
-      background: linear-gradient(to bottom, #004d26, #00703e, #33b864);
-      color: white;
-      height: 75vh;
-    }
-
-    .hero-content {
-      max-width: 50%;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-content p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-    }
-
-    .hero-content button {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      color: white;
-      background: #33b864;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero-content button:hover {
-      background: #2b954f;
-    }
-
-    .hero-image {
-      max-width: 40%;
-    }
-
-    .hero-image img {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .section {
-      padding: 50px 20px;
-      margin: 0;
-      background: transparent;
-    }
-
-    .section h2 {
-      font-size: 3rem;
-      margin-bottom: 30px;
-      color: #00703e;
-      text-align: center;
-    }
-
-    .about {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 40px;
-      background: #f1fff4;
-      color: #333;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 200px;
-      margin: 10px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .about-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .about-item i {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: #33b864;
-    }
-
-    .about-item h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-      color: #33b864;
-    }
-
-    .about-item p {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    footer {
-      background: rgba(0, 77, 38, 0.9);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: #33b864;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    header.scrolled {
-      background: rgba(0, 77, 38, 0.9);
-      transition: background 0.3s ease;
-    }
-
-    .section.steps .steps-title {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .hero-background {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      background: url('./img/logo.svg') no-repeat center / contain;
-      pointer-events: none;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 30px 20px;
-      }
-
-      .hero-content {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-content p {
-        font-size: 1.2rem;
-      }
-
-      .hero-content button {
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
-
-      .hero-background {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        background-size: contain;
-        margin-top: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <header>
-    <div class="logo" style="color: #fff; display: flex; align-items: center;">
-      <img src="./img/logo.png" alt="א. ארזים" style="height: 50px; margin-right: 10px;">
+    <div class="logo">
+      <img src="./img/logo.png" alt="א. ארזים" class="logo-img">
       <span>א. ארזים</span>
     </div>
     <nav aria-label="Main navigation">
@@ -253,19 +24,17 @@
   </header>
 
   <main>
-    <section class="hero"
-      style="position: relative; background: linear-gradient(to bottom, #004d26, #00703e, #33b864); color: white; height: 75vh;">
+    <section class="hero">
       <div class="hero-content">
         <h1>מצאו את הכישרון הטוב ביותר</h1>
         <p>אנו מחברים בין אנשי מקצוע מובילים לחברות המובילות ברחבי העולם. התחילו את המסע שלכם איתנו עוד היום.</p>
         <div class="hero-buttons">
-          <button class="btn-employer"
+          <button class="btn"
             onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">למעסיקים</button>
-          <button class="btn-jobseeker"
+          <button class="btn"
             onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">למחפשי עבודה</button>
         </div>
       </div>
-
       <div class="hero-background"></div>
     </section>
 
@@ -297,10 +66,7 @@
       </div>
     </section>
 
-
-
     <section id="steps" class="section steps">
-
       <h2 class="steps-title">שלבים להצלחה</h2>
       <div class="steps">
         <div class="step">
@@ -319,100 +85,43 @@
           <p>הגישו מועמדות למשרות, השתתפו בראיונות והשיגו את התפקיד החלומי שלכם.</p>
         </div>
       </div>
-      <style>
-        .steps {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 30px;
-          margin-top: 30px;
-        }
-
-        .step {
-          flex: 1;
-          max-width: 300px;
-          padding: 20px;
-          background: #f1fff4;
-          border-radius: 10px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .step:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .step-icon {
-          font-size: 3rem;
-          margin-bottom: 15px;
-          color: #33b864;
-        }
-
-        .step h3 {
-          font-size: 1.5rem;
-          color: #00703e;
-          margin-bottom: 10px;
-        }
-
-        .step p {
-          font-size: 1rem;
-          color: #666;
-        }
-      </style>
     </section>
-  </main>
-
-  <footer>
-    <section id="contact" class="section"
-      style="background: #f1fff4; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-      <h2 style="font-size: 2.5rem; color: #33b864; text-align: center; margin-bottom: 20px;">צרו קשר עכשיו!</h2>
-      <p style="text-align: center; font-size: 1rem; color: #666; max-width: 600px; margin: 20px auto;">אנו מוכנים לעזור
-        לכם למצוא את אנשי המקצוע הטובים ביותר או להשיג את העבודה החלומית שלכם. צרו קשר ונפתור את הצורך שלכם במהירות!</p>
-      <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap;">
-        <div style="flex: 1; max-width: 500px;">
-          <p style="font-size: 1.2rem; color: #33b864; margin-bottom: 10px;"><i class="fas fa-phone-alt"></i> טלפון: 054
-            223 4160</p>
-          <ul style="list-style: none; padding: 0; text-align: left;">
-            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> מאגר נרחב
-              של משרות ועובדים</li>
-            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> תמיכה רב
-              לשונית</li>
-            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> תגובה
-              מהירה</li>
-            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> גישה
-              מותאמת אישית</li>
-            <li style="margin: 10px 0; font-size: 1.2rem; color: #33b864;"><i class="fas fa-check-circle"></i> תמיכה
-              24/7</li>
+    <section id="contact" class="contact">
+      <h2 class="contact-title">צרו קשר עכשיו!</h2>
+      <p class="contact-intro">אנו מוכנים לעזור לכם למצוא את אנשי המקצוע הטובים ביותר או להשיג את העבודה החלומית שלכם.
+        צרו קשר ונפתור את הצורך שלכם במהירות!</p>
+      <p><i class="fas fa-phone-alt"></i> : +972 54 223 4160</p>
+      <div class="contact-columns">
+        <div class="contact-info">
+          <ul class="contact-benefits">
+            <li><i class="fas fa-check-circle"></i> מאגר נרחב של משרות ועובדים</li>
+            <li><i class="fas fa-check-circle"></i> תמיכה רב לשונית</li>
+            <li><i class="fas fa-check-circle"></i> תגובה מהירה</li>
+            <li><i class="fas fa-check-circle"></i> גישה מותאמת אישית</li>
+            <li><i class="fas fa-check-circle"></i> תמיכה 24/7</li>
           </ul>
         </div>
-        <div style="flex: 1; max-width: 500px;">
-          <form class="contact-form" style="width: 100%;">
-            <input type="text" placeholder="השם שלך"
-              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-            <input type="email" placeholder="האימייל שלך"
-              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-            <textarea placeholder="ההודעה שלך"
-              style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
-            <button type="submit"
-              style="padding: 10px 20px; background: #33b864; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">שלח
-              הודעה</button>
+        <div class="contact-form-container">
+          <form class="contact-form">
+            <input type="text" placeholder="השם שלך" class="contact-input">
+            <input type="email" placeholder="האימייל שלך" class="contact-input">
+            <textarea placeholder="ההודעה שלך" class="contact-textarea"></textarea>
+            <button type="submit" class="contact-button">שלח הודעה</button>
           </form>
         </div>
       </div>
-      <div class="social-icons" style="margin-top: 20px; text-align: center;">
-        <a href="https://www.facebook.com/profile.php?id=61571058780540&mibextid=ZbWKwL"
-          style="margin: 0 10px; color: #33b864;"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://wa.me/972542234160" style="margin: 0 10px; color: #33b864;"><i
-            class="fab fa-whatsapp fa-2x"></i></a>
-        <a href="https://www.instagram.com/jobinisrael_arzimhr?igsh=MTFoaXoyMjRvd2Rzcg=="
-          style="margin: 0 10px; color: #33b864;"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://t.me/WorkWithAArzim" style="margin: 0 10px; color: #33b864;"><i
-            class="fab fa-telegram fa-2x"></i></a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61571058780540&mibextid=ZbWKwL" class="social-icon"><i
+            class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/972542234160" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/jobinisrael_arzimhr?igsh=MTFoaXoyMjRvd2Rzcg==" class="social-icon"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://t.me/WorkWithAArzim" class="social-icon"><i class="fab fa-telegram"></i></a>
       </div>
     </section>
-    <p>&copy; 2025 HiringPro. All rights reserved. <a href="#">Privacy Policy</a></p>
+  </main>
+  <footer>
+    <p>&copy; 2025 א. ארזים.</p>
   </footer>
   <script>
     window.addEventListener('scroll', function () {
