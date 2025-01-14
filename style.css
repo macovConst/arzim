@@ -129,6 +129,8 @@ header nav a:hover {
   box-shadow: var(--box-shadow);
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .hero-content .btn:hover {
